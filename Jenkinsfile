@@ -1,0 +1,34 @@
+pipeline {
+ agent any
+ tools{
+     maven 'Maven'
+      }
+     stages{
+         stage('CheckoutCode')
+          {
+            steps
+             {
+                git credentialsId: 'git_creds', url: 'https://github.com/kulabtech/env-pcf.git' , branch: 'sonarqube-8'
+             }
+          }
+         stage ('Build') 
+         {
+            steps 
+            {
+                sh 'chmod +x gradlew'
+                sh './gradlew clean build
+            }
+        }
+       
+       stage('CodeAnalysis') 
+         {
+            steps 
+            {
+              withSonarQubeEnv('sonarserver') 
+                {
+                   sh './gradlew sonarqube -i'
+                }
+            }
+          }            
+    }
+}

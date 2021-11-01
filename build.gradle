@@ -20,7 +20,7 @@ dependencies {
 
 sonarqube {
     properties {
-        property 'sonar.host.url', 'http://ec2-65-2-125-24.ap-south-1.compute.amazonaws.com:9000/'
+        property 'sonar.host.url', 'http://ec2-13-232-24-20.ap-south-1.compute.amazonaws.com:9000/'
         property 'sonar.projectName', 'testsonar'
         property 'sonar.login', '*****'
         property 'sonar.password', '*****'

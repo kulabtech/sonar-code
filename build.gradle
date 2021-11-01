@@ -22,8 +22,8 @@ sonarqube {
     properties {
         property 'sonar.host.url', 'http://ec2-13-232-24-20.ap-south-1.compute.amazonaws.com:9000/'
         property 'sonar.projectName', 'testsonar'
-        property 'sonar.login', '*****'
-        property 'sonar.password', '*****'
+        property 'sonar.login', 'sekhar'
+        property 'sonar.password', 'Novak@95'
         property 'sonar.sources', 'src/main'
         property 'sonar.tests', 'src/test'
         property 'sonar.projectKey', 'testsonar'

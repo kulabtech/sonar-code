@@ -21,6 +21,14 @@ dependencies {
 sonarqube {
     properties {
         property 'sonar.host.url', 'http://localhost:9000'
+        property 'sonar.projectName', 'testsonar'
+        property 'sonar.login', 'sekhar'
+        property 'sonar.password', 'sekhar'
+        property 'sonar.sources', 'src/main'
+        property 'sonar.tests', 'src/test'
+        property 'sonar.projectKey', 'testsonar'
+        property 'sonar.projectVersion', 'testsonar-0.1'
+        
     }
 }
 

@@ -24,10 +24,8 @@ pipeline {
          {
             steps 
             {
-             script {
               withSonarQubeEnv(credentialsId: 'sonar-token') 
               sh './gradlew sonarqube -i'
-             }
                 }
             }
           }

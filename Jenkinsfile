@@ -8,7 +8,7 @@ pipeline {
           {
             steps
              {
-                git credentialsId: 'git_creds', url: 'https://github.com/kulabtech/env-pcf.git' , branch: 'sonarqube-8'
+                git credentialsId: 'git_creds', url: 'https://github.com/kulabtech/sonar-code.git' , branch: 'sonarqube-8'
              }
           }
          stage ('Build') 

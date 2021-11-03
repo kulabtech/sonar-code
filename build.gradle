@@ -37,10 +37,9 @@ jacocoTestReport {
         xml.enabled true
     }
 }
-
-test {
-useJUnitPlatform()
-finalizedBy jacocoTestReport
+test.finalizedBy jacocoTestReport
+tasks.named('sonarqube').configure {
+    dependsOn test
 }
 
 
